@@ -1,0 +1,30 @@
+
+.profile-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 
+
+.btn{
+    margin: 1em 0em;
+    padding: .5em 1em;
+    color: #f3efef;
+    border-radius: 35px;
+    background-color: rgb(175, 121, 6);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+
+}
+.btn:hover{
+    background-color: rgb(221, 154, 11);
+    color: #fff;
+    transform: scale(1.1);
+    
+}
+} */
