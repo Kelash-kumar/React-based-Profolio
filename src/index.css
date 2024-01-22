@@ -69,7 +69,7 @@
    }
 
    body{
-    background-color: #f0eeee;
+    background-color:var(--body-color);
     line-height: 1.7;
     color: var(--text-color);
 
@@ -116,7 +116,7 @@
     font-weight: var(--font-bold);
 }
 
-.section__title::before{
+/* .section__title::before{
     content: "";
     background: url('../public/assets/dots-bg.svg');
     position: absolute;
@@ -125,8 +125,7 @@
     width: 12rem;
     height: .123rem;
     background-color: var(--first-color);
-    /* border-radius: 0.313rem; */
-}
+} */
 
 .btn{
     display: inline-block;

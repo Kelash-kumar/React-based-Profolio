@@ -1,174 +1,89 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import { motion } from 'framer-motion';
+import './services.css';
+import image1 from '../../assets/service-1.svg';
+import image2 from '../../assets/service-2.svg';
+import image3 from '../../assets/service-3.svg';
 
-// React components
-import { FaPaintbrush } from "react-icons/fa6";
-import { IoCodeSlash } from "react-icons/io5";
-import { IoCameraReverse } from "react-icons/io5";
-import './services.css'; // Replace with your actual stylesheet file
-import Image1 from '../../../public/assets/service-1.svg';
-import Image2 from '../../../public/assets/service-2.svg';
-import Image3 from '../../../public/assets/service-3.svg';
-// eslint-disable-next-line react/prop-types
-const Card = ({ color, iconClass, title, description,icon }) => {
+const ProgressBar = ({ skillName, value, color }) => {
   return (
-    <div className="card__bx" style={{ '--clr': color }}>
-      <div className="card__data">
-        <div className="card__icon">
-          <i className={iconClass}>
-            {icon}
-          </i>
-        </div>
-        <div className="card__content">
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <a href="#">Read More</a>
-        </div>
+    <motion.div
+      className="skill_progress__item"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <p>{skillName}</p>
+      <div className="progress">
+        <div
+          className="progress-bar"
+          style={{
+            width: `${value}%`,
+            backgroundColor: `${color}`,
+          }}
+        ></div>
       </div>
-    </div>
+    </motion.div>
+  );
+};
+
+const ServiceItem = ({ image, title, description }) => {
+  return (
+    <motion.div
+      className="service-item"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <img src={image} alt={`Service Icon`} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </motion.div>
   );
 };
 
 const Services = () => {
-  const data = [
-    {
-      id: 1,
-      image: Image1,
-      title: "UI/UX design",
-      color: "#89ec5b",
-      icon: <FaPaintbrush />,
-      description:
-        "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
-    },
-    {
-      id: 2,
-      image: Image2,
-      color: "#eb5ae5",
-      title: "Web Development",
-      icon: <IoCodeSlash />,
-      description:
-        "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
-    },
-    {
-      id: 3,
-      image: Image3,
-      title: "Photography",
-      color: "#5b98eb",
-      icon: <IoCameraReverse />,
-      description:
-        "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
-    },
-  ];
-  
   return (
-    <section className="service__container about">
-      <section className="card__container about__container">
-         {
-          data.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                color={item.color}
-                iconClass={item.iconClass}
-                title={item.title}
-                description={item.description}
-                icon={item.icon}
-              />
-            );
-          })
-         }
-
-        {/* <Card color="#89ec5b" iconClass="fa-solid fa-paintbrush" title="Designing" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." /> */}
-        {/* <Card color="#eb5ae5" iconClass="fa-solid fa-code" title="Development" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." /> */}
-        {/* <Card color="#5b98eb" iconClass="fa-brands fa-searchengin" title="SEO" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." /> */}
-      </section>
-    </section>
+    <motion.div
+      className="service"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className="section__title">My Services</h2>
+      <div className="services-container">
+        <ServiceItem
+          image={image1}
+          title="Web Development"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula auctor sem, et sagittis lorem fermentum id."
+        />
+        <ServiceItem
+          image={image2}
+          title="Graphic Design"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula auctor sem, et sagittis lorem fermentum id."
+        />
+        <ServiceItem
+          image={image3}
+          title="Mobile App Development"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula auctor sem, et sagittis lorem fermentum id."
+        />
+      </div>
+      <div className="skill_progress">
+        <h2 className="section__title">My Skills</h2>
+        <div className="skill_progress__container">
+          <ProgressBar skillName={'HTML'} value={90} color={'#f16529'} />
+          <ProgressBar skillName={'CSS'} value={80} color={'#2965f1'} />
+          <ProgressBar skillName={'Javascript'} value={70} color={'#f0db4f'} />
+          <ProgressBar skillName={'React'} value={60} color={'#61dbfb'} />
+          <ProgressBar skillName={'Node'} value={50} color={'#68a063'} />
+          <ProgressBar skillName={'MongoDB'} value={56} color={'#4db33d'} />
+          <ProgressBar skillName={'Express'} value={48} color={'#ffef00'} />
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
 export default Services;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import './services.css';
-// const Services = () => {
-//   return (
-//     <section className='service__page section'>
-//         <h2 className='section__title title'>Services</h2>
-//       <div className="service__container">
-      
-//         <div className='card'>
-//           <div className="image">
-//             <img src="https://plus.unsplash.com/premium_photo-1670963024947-bbb770b7ee28?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D" alt="image1" />
-//           </div>
-//           <div className="content">
-//             <h1>Frontend Developer</h1>
-//             <p>
-//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-//             </p>
-//           </div>
-//         </div>
-
-       
-
-
-
-        
-//         </div>
-//     </section>
-//   )
-// }
-
-// export default Services

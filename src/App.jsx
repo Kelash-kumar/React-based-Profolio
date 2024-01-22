@@ -7,13 +7,23 @@ import Projects from './components/Projects/index';
 import Contact from './components/contact/index';
 import Resume from './components/resume/resume';
 import './App.css';
-
 function App() {
+  
+  
+
+  const cursor = document.querySelector('#cursor');
+  const stalker = document.querySelector('#stalker');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
   return (
     <Router>
       <>
+      <div id="cursor"></div>
+  <div id="stalker"></div>
+   
         <Sidebar />
-        {/* <div className="main"> */}
           <Routes>
             <Route path="/"  element={<Home/>} />
             <Route path="/about" element={<About/>} />
@@ -22,10 +32,10 @@ function App() {
             <Route path="/resume" element={<Resume/>} />
             <Route path="/contact" element={<Contact/>} />
           </Routes>
-        {/* </div> */}
       </>
     </Router>
   );
 }
+
 
 export default App;

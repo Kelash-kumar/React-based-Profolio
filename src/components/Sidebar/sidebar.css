@@ -4,15 +4,15 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background: #ffffff54;
+    background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-right: 1px solid #fdfafa8f;
-    
     z-index: 1;
-    transition: width 0.3s ease; /* Added transition for width */
+    transition: all 1s ease; /* Added transition for width */
 }
+
 
 .logo_div img {
     height: 60px;
@@ -29,24 +29,52 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .8rem;
-    font-size: 23px;
+    gap: 1rem;
+    font-size: 25px;
     outline: black;
     cursor: pointer;
+
 }
+
 
 .sidebar__icons_div .icons {
-    color: #000;
+    color: #636363;
     transition: all 0.3s ease-in-out;
+    
 }
+
+.icon__name{
+    text-transform: uppercase;
+    font-size: 8px;
+    color: #bebbbb;
+    font-weight: 600;
+    position: absolute;
+   left: 35px;
+    top: 10px;
+   background-color: #f9f7fd42; 
+   padding: 0px 5px; 
+   border-radius: 30px;
+   transition: all 0.3s ease-in-out;
+   display: none;
+   box-shadow: 0px 0px 5px 0px #8b88888f;
+     
+    }
 
 .sidebar__icons_div .icons:hover {
-    color: #a57f03;
-    transform: scale(1.2);
+    transform: scale(1.4);
+    color: #ff4c61;
+    
+    
 }
 
+.icons:hover .icon__name{
+    display: block;
+}
+
+    
+
 .sidebar__icons_div .icons.active {
-    color: #24bd05;
+    color: #ff4c61;
     transform: scale(1.5);
 }
 
@@ -68,23 +96,30 @@
         border-right: none;
         border-bottom: 1px solid #fdfafa;
         z-index: 1;
-    }
+        
 
-    .logo_div img {
+    }
+    .icons:hover .icon__name{
         display: none;
     }
-
-    .sidebar__icons_div .icons {
-        font-size: 22px;
+    .logo_div  {
+        display: none;
     }
-
+    .sidebar__icons_div .icons {
+        font-size: 1.9rem;
+    }
+      
     .sidebar__icons_div {
         margin-top: 0;
         flex-direction: row;
-        gap: 7vw;
+        gap: 6vw;
+    }
+    .icons{
+        margin-top: 1rem;
     }
 
     .sidebar-footer-text {
         display: none;
     }
+
 }

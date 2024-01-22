@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { IoHomeOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-import { MdContactPhone } from "react-icons/md";
-import { FaToolbox } from "react-icons/fa6";
-import { MdMedicalServices } from "react-icons/md";
-import { MdOutlineCastForEducation } from "react-icons/md";
-import './sidebar.css';
+import { MdOutlineContactPhone } from "react-icons/md";
+import { GrProjects } from "react-icons/gr";
+import { MdOutlineMedicalServices } from "react-icons/md";
+import { LiaGraduationCapSolid } from "react-icons/lia";import './sidebar.css';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -22,26 +21,25 @@ const Sidebar = () => {
 
       <div className='sidebar__icons_div'>
         <Link to='/' className='icons'>
-          <IoHomeOutline/>
+          <IoHomeOutline/><span className="icon__name">home</span>
         </Link>
-        <Link to='/about' className='icons'>
+        <Link to='/about' className='icons'><span className="icon__name">About</span>
           <CgProfile/>
         </Link>
-        <Link to='/services' className='icons'>
-          <MdMedicalServices/>
+        <Link to='/services' className='icons'><span className="icon__name">Services</span>
+          <MdOutlineMedicalServices/>
         </Link>
-        <Link to='/resume' className='icons'>
-          <MdOutlineCastForEducation/>
+        <Link to='/resume' className='icons'><span className="icon__name">Resume</span>
+          <LiaGraduationCapSolid/>
         </Link>
-        <Link to='/projects' className='icons'>
-          <FaToolbox/>
+        <Link to='/projects' className='icons'><span className="icon__name">Projects</span>
+          <GrProjects/>
         </Link>
-        <Link to='/contact' className='icons'>
-          <MdContactPhone/>
+        <Link to='/contact' className='icons'><span className="icon__name">Contact</span>
+          <MdOutlineContactPhone/>
         </Link>
       </div>
       
-      <span className='sidebar-footer-text'>2022-2023</span>
     </motion.div>
   )
 }

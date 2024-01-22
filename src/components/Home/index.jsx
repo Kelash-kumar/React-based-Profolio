@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import './style.css';
 import { CiFacebook } from 'react-icons/ci';
 import { CiLinkedin } from 'react-icons/ci';
-import { FaXTwitter } from 'react-icons/fa6';
-import profile_image from '../../../public/assets/avatar-1.svg'
+import { FiGithub } from 'react-icons/fi';
+import profile_image from '../../assets/profile.jpeg'
 
 const Home = () => {
   const containerVariants = {
@@ -30,14 +30,20 @@ const Home = () => {
           alt="image"
         />
         <motion.h1 className="name">Kelash Kumar</motion.h1>
-        <motion.h3 className="job">Backend Developer</motion.h3>
+        <motion.h3 className="job">MERN Stack Developer</motion.h3>
         <motion.div
           className="social-icons header__icons"
           variants={itemVariants}
         >
-          <CiFacebook className="icon media_icon" />
+          <a href="https://www.linkedin.com/in/kelash-kumar-47245a255/" target="_blank" rel="noopener noreferrer">
           <CiLinkedin className="icon media_icon" />
-          <FaXTwitter className="icon media_icon" />
+          </a>
+          <a href="https://github.com/Kelash-kumar" target="_blank" rel="noopener noreferrer">
+          <FiGithub className="icon media_icon" />
+          </a>
+          <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <CiFacebook className="icon media_icon" />
+          </a>
         </motion.div>
         <motion.a href="#" className="btn" variants={itemVariants}>
           Hire Me

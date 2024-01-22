@@ -1,9 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+// tailwind.config.js
 
+// eslint-disable-next-line no-undef
+module.
+exports = {
+  // other configurations...
+
+  content: [
+    './src/**/*.html',
+    './src/**/*.js',
+    // Add more file paths as needed for your project
+  ],
+}

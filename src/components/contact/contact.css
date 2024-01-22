@@ -1,7 +1,7 @@
 
 .contact {
   padding: 50px 0;
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
   height: 100vh;
 }
 
@@ -76,7 +76,18 @@
 
 @media (max-width: 480px) {
   .section-title h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
+  .contact-info h3 {
+    font-size: 16px;
+  }
+.contact-form input,
+.contact-form textarea {
+  
+  padding: 9px;
+  border-radius: 10px;
+  /* margin-bottom: 20px; */
+ 
+}
 }
 
