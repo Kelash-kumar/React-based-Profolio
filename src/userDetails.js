@@ -1,0 +1,108 @@
+// services images
+import image1 from './assets/service-1.svg';
+import image2 from './assets/service-2.svg';
+import image3 from './assets/service-3.svg';
+import profile_image from './assets/profile.jpeg';
+
+// projects images
+import work1 from './assets/Docs-App-react.png';
+import work2 from './assets/Blog-website-login_singup.png';
+import work3 from './assets/Pinterest_SingUp page.png';
+import work4 from './assets/work-4.svg';
+import work5 from './assets/work-5.svg';
+import work6 from './assets/work-6.svg';
+
+import { CiFacebook } from 'react-icons/ci';
+import { CiLinkedin } from 'react-icons/ci';
+import { FiGithub } from 'react-icons/fi';
+
+import { FaGraduationCap } from "react-icons/fa6";
+import { MdOutlineClass } from "react-icons/md";
+
+
+ // all data about me 
+ const user = {
+    name: "Kelash Kumar",
+    email: "kelash.raisal@gmail.com",
+    phone: "92 3491100042",
+    address: "Jasmhoro Sindh Pakistan",
+    profession: "MERN Stack Developer",
+    profile_image: profile_image,
+    about: "I am a self-taught developer with a background in business and finance. I am currently working as a freelancer and looking for a full-time job as a Frontend Developer. I am a team player and I love working with people. I am a fast learner and I am always looking for ways to improve my skills. I have expertise in React, Node, Express, MongoDB, HTML, CSS, Bootstrap, Material UI, JavaScript, jQuery, AJAX, JSON, REST API, Git, GitHub, Heroku, Netlify, Firebase, WordPress, Shopify, and more. Worked on many projects.",
+    social: [
+      { name: "Facebook", link: "https://www.facebook.com/kelash.raisal/",icons: <CiFacebook className="icon media_icon" /> },
+      { name: "Instagram", link: "https://www.instagram.com/kelash_raisal/",icons: <CiLinkedin className="icon media_icon" /> },
+      { name: "GitHub", link: "https://www.github.com/kelash-raisal/" ,icons: <FiGithub className="icon media_icon" />},
+    ],
+    skills: [
+      { name: "HTML", percentage: "90",color:'#f16529' },
+      { name: "CSS", percentage: "90" ,color:'#2965f1'},
+      { name: "Bootstrap", percentage: "90" ,color:'#563d7c'},
+      { name: "JavaScript", percentage: "90" ,color:'#f0db4f'},
+      { name: "React", percentage: "90" ,color:'#61dbfb'},
+      { name: "Node", percentage: "90" ,color:'#68a063'},
+      { name: "Express", percentage: "90" ,color:'#ffef00'},
+      { name: "MongoDB", percentage: "90" ,color:'#4db33d'},
+      { name: "WordPress", percentage: "90" ,color:'#21759b'},
+      { name: "Shopify", percentage: "90" ,color:'#7ab55c'},
+    ],
+     resumeData:[
+      {
+        type:'education',
+        icon:<MdOutlineClass className='exp_icon'/>,
+        year:'2021-present',
+        title:'Software Engineering',
+        desc:'Graduating from the University of Muet Jamshoro.still studying in 5th semester.'
+      },
+      {
+        type:'education',
+        icon:<MdOutlineClass className='exp_icon'/>,
+        year:'2019-2020',
+        title:'O-level ',
+        desc:'BFPS School System.Achieved above 80% marks in all subjects .'
+      },
+      {
+        type:'education',
+        icon:<MdOutlineClass className='exp_icon'/>,
+        year:'2023',
+        title:'computer Course',
+        desc:'APTECH Computer Education. The course was about Basics of computer knowledges and MS Office.'
+      },
+      {
+        type:'experience',
+        icon:<FaGraduationCap className='exp_icon'/>,
+        year:'2021',
+        title:'Web Developer',
+        desc:'I have done my internship in Web Development. After successfully completing the internship, '
+      },
+      {
+        type:'experience',
+        icon:<FaGraduationCap className='exp_icon'/>,
+        year:'2022',
+        title:'React  Developer',
+        desc:'I have done my internship in React Development.After successfully completing the internship, '
+      },
+      {
+        type:'experience',
+        icon:<FaGraduationCap className='exp_icon'/>,
+        year:'2023',
+        title:'Full stack MERN Developer',
+        desc:'I have done my internship in MERN Development.After successfully completing the internship, '
+      }
+    ],
+    services: [
+      { title: "Web Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptatum." , image: image1},
+      { title: "MERN Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptatum." , image: image2},
+      { title: "FULL Stack Development", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptatum." , image: image3},
+    ],
+    projects: [
+      { id: 1, image: work1, title: 'React Docs App', category: 'Design' },
+      { id: 2, image: work2, title: 'React Blog Website', category: 'Design' },
+      { id: 3, image: work3, title: 'Pinterest SignUp Page', category: 'Photography' },
+      { id: 4, image: work4, title: 'Onboarding Motivation', category: 'Design' },
+      { id: 5, image: work5, title: 'iMac Mockup Design', category: 'Creative' },
+      { id: 6, image: work6, title: 'Game Store App Concept', category: 'Art' },
+    ],
+  };
+  
+export default user;

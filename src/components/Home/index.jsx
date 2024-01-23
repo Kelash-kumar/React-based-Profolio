@@ -1,11 +1,16 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 import './style.css';
-import { CiFacebook } from 'react-icons/ci';
-import { CiLinkedin } from 'react-icons/ci';
-import { FiGithub } from 'react-icons/fi';
-import profile_image from '../../assets/profile.jpeg'
+import { useUser } from '../../UserContext';
+
 
 const Home = () => {
+
+  const  user  = useUser();
+  const { name,profession,profile_image ,social} = user;
+  console.log(social);
+
+
   const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -15,6 +20,7 @@ const Home = () => {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
   };
+    
 
   return (
     <motion.section
@@ -29,21 +35,22 @@ const Home = () => {
           src={profile_image}
           alt="image"
         />
-        <motion.h1 className="name">Kelash Kumar</motion.h1>
-        <motion.h3 className="job">MERN Stack Developer</motion.h3>
+        <motion.h1 className="name">{name}</motion.h1>
+        <motion.h3 className="job">{profession}</motion.h3>
         <motion.div
           className="social-icons header__icons"
           variants={itemVariants}
         >
-          <a href="https://www.linkedin.com/in/kelash-kumar-47245a255/" target="_blank" rel="noopener noreferrer">
-          <CiLinkedin className="icon media_icon" />
-          </a>
-          <a href="https://github.com/Kelash-kumar" target="_blank" rel="noopener noreferrer">
-          <FiGithub className="icon media_icon" />
-          </a>
-          <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <CiFacebook className="icon media_icon" />
-          </a>
+          {
+            social.map((item,index) => {
+              return (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" key={index}>
+                  {item.icons}
+                </a>
+              )
+            })
+          }
+         
         </motion.div>
         <motion.a href="#" className="btn" variants={itemVariants}>
           Hire Me

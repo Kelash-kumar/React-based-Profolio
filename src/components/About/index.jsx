@@ -7,7 +7,7 @@ import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { MdOutlineIncompleteCircle } from "react-icons/md";
 import { MdGroups } from "react-icons/md";
 import { FaAngleDoubleDown } from "react-icons/fa";
-import profile_image from '../../assets/profile.jpeg';
+import { useUser } from '../../UserContext';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -23,6 +23,9 @@ const stagger = {
 };
 
 const About = () => {
+  const user = useUser();
+  const { email,phone,address, profession, profile_image, about } = user;
+
   const [isScrolled, setIsScrolled] = useState(true);
 
   useEffect(() => {
@@ -48,10 +51,12 @@ const About = () => {
         <div className='about__content'>
           <motion.img src={profile_image} alt="profile-image" className="profile-img" variants={fadeInUp} />
           <div className='about__content__text'>
-            <motion.p variants={fadeInUp}>I am a <strong>Frontend Developer </strong> with a passion for learning and building web applications. I am a self-taught developer with a background in business and finance. I am currently working as a freelancer and looking for a full-time job as a Frontend Developer. I am a team player and I love working with people. I am a fast learner and I am always looking for ways to improve my skills.</motion.p>
-            <motion.p variants={fadeInUp}>My goal is to become a Full Stack Developer and build amazing web applications that will help people and make their lives easier. I am currently learning React and I am looking forward to learning more about it.</motion.p>
-            <motion.p variants={fadeInUp}>When I am not coding, I like to read books, watch movies and TV shows, play video games, and spend time with my family and friends.</motion.p>
-            <motion.button className='btn' variants={fadeInUp}>Download CV</motion.button>
+            <motion.p variants={fadeInUp}>I am a <strong>{profession} </strong> with a passion for learning and building web applications. </motion.p>
+            <motion.p variants={fadeInUp}>{about}</motion.p>
+            <a href="/home/kelash-kumar/Downloads/" target="_blank" rel="noopener noreferrer" download={'kelash-kumar-CV.pdf'}>
+
+            <motion.button className='btn' variants={fadeInUp} aria-label='download-cv'>Download CV</motion.button>
+            </a>
           </div>
         </div>
         {isScrolled &&
@@ -90,9 +95,9 @@ const About = () => {
             />
           </div>
           <footer className='about__footer'>
-            <motion.span variants={fadeInUp}>kelash.raisal@gmail.com</motion.span>
-            <motion.span variants={fadeInUp}>+92 3491100042</motion.span>
-            <motion.span variants={fadeInUp}>Rashidi Hostel Muet Jamshoro, Sindh</motion.span>
+            <motion.span variants={fadeInUp}>{email}</motion.span>
+            <motion.span variants={fadeInUp}>{phone}</motion.span>
+            <motion.span variants={fadeInUp}>{address}</motion.span>
           </footer>
         </div>
       </div>

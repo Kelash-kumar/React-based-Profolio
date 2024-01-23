@@ -6,34 +6,25 @@ import Services from './components/Services/index';
 import Projects from './components/Projects/index';
 import Contact from './components/contact/index';
 import Resume from './components/resume/resume';
+import { UserProvider } from './UserContext'; // Import the context
 import './App.css';
+ import {user} from './userDetails';
 function App() {
   
-  
-
-  const cursor = document.querySelector('#cursor');
-  const stalker = document.querySelector('#stalker');
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-  });
   return (
     <Router>
-      <>
-      <div id="cursor"></div>
-  <div id="stalker"></div>
-   
-        <Sidebar />
-          <Routes>
-            <Route path="/"  element={<Home/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/services" element={<Services/>} />
-            <Route path="/projects" element={<Projects/>} />
-            <Route path="/resume" element={<Resume/>} />
-            <Route path="/contact" element={<Contact/>} />
-          </Routes>
-      </>
-    </Router>
+    <UserProvider user={user}>
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </UserProvider>
+  </Router>
   );
 }
 

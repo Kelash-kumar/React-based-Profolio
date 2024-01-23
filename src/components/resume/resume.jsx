@@ -1,54 +1,11 @@
 import'./resume.css';
 import Card from './card';
 import { motion } from "framer-motion";
-import { FaGraduationCap } from "react-icons/fa6";
-import { MdOutlineClass } from "react-icons/md";
+import { useUser } from '../../UserContext';
 const Education = () => {
 
-  const Data=[
-    {
-      type:'education',
-      icon:<MdOutlineClass className='exp_icon'/>,
-      year:'2021-present',
-      title:'Software Engineering',
-      desc:'Graduating from the University of Muet Jamshoro.still studying in 5th semester.'
-    },
-    {
-      type:'education',
-      icon:<MdOutlineClass className='exp_icon'/>,
-      year:'2019-2020',
-      title:'O-level ',
-      desc:'BFPS School System.Achieved above 80% marks in all subjects .'
-    },
-    {
-      type:'education',
-      icon:<MdOutlineClass className='exp_icon'/>,
-      year:'2023',
-      title:'computer Course',
-      desc:'APTECH Computer Education. The course was about Basics of computer knowledges and MS Office.'
-    },
-    {
-      type:'experience',
-      icon:<FaGraduationCap className='exp_icon'/>,
-      year:'2021',
-      title:'Web Developer',
-      desc:'I have done my internship in Web Development. After successfully completing the internship, '
-    },
-    {
-      type:'experience',
-      icon:<FaGraduationCap className='exp_icon'/>,
-      year:'2022',
-      title:'React  Developer',
-      desc:'I have done my internship in React Development.After successfully completing the internship, '
-    },
-    {
-      type:'experience',
-      icon:<FaGraduationCap className='exp_icon'/>,
-      year:'2023',
-      title:'Full stack MERN Developer',
-      desc:'I have done my internship in MERN Development.After successfully completing the internship, '
-    }
-  ];
+  const user= useUser();
+  const Data = user.resumeData;
 
   const containerVariants = {
     hidden: { opacity: 0 },
