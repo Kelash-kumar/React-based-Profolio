@@ -17,7 +17,9 @@ const Services = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="section__title">My Services</h2>
+      <h2 className="section__title "
+       style={{marginTop: '50px'}}
+      >My Services</h2>
       <div className="services-container">
          {
           Data.map((item, index) => {
@@ -33,7 +35,7 @@ const Services = () => {
          }
       </div>
       <div className="skill_progress">
-        <h2 className="section__title">My Skills</h2>
+        <h2 className="section__title ">My Skills</h2>
         <div className="skill_progress__container">
           {skills.map((skill) => (
             <ProgressBar
