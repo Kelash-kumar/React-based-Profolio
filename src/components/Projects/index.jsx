@@ -24,7 +24,7 @@ const stagger = {
 function Projects() {
   const user = useUser();
   const projects=user.projects;
-  const allCategories = ['All', 'Branding', 'Creative', 'Design', 'Photography'];
+  const allCategories = ['All', 'Nodejs', 'Creative', 'Design', 'Reactjs'];
   const [selectedCategory, setSelectedCategory] = useState('All');
   const filteredProjects =
     selectedCategory === 'All'

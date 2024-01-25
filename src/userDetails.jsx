@@ -1,5 +1,5 @@
 // profile image
-import profile_image from './assets/profile.jpeg';
+import profile_image from './assets/profile-pic.png';
 // services images
 import image1 from './assets/wd.avif';
 import image2 from './assets/Msd.jpg';
@@ -9,9 +9,9 @@ import image3 from './assets/fsd.avif';
 import work1 from './assets/Docs-App-react.png';
 import work2 from './assets/Blog-website-login_singup.png';
 import work3 from './assets/Pinterest_SingUp page.png';
-import work4 from './assets/work-4.svg';
-import work5 from './assets/work-5.svg';
-import work6 from './assets/work-6.svg';
+import work4 from './assets/produc_designer.png';
+import work5 from './assets/react-website.png';
+import work6 from './assets/Contact_app.png';
 // icons
 import { CiFacebook } from 'react-icons/ci';
 import { CiLinkedin } from 'react-icons/ci';
@@ -96,13 +96,14 @@ const userDetails = {
     { title: 'MERN Development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptatum.', image: image2 },
     { title: 'FULL Stack Development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptatum.', image: image3 },
   ],
+  // category:['All', 'Nodejs', 'Creative', 'Design', 'Reactjs'];
   projects: [
-    { id: 1, image: work1, title: 'React Docs App', category: 'Design' },
-    { id: 2, image: work2, title: 'React Blog Website', category: 'Design' },
-    { id: 3, image: work3, title: 'Pinterest SignUp Page', category: 'Photography' },
-    { id: 4, image: work4, title: 'Onboarding Motivation', category: 'Design' },
-    { id: 5, image: work5, title: 'iMac Mockup Design', category: 'Creative' },
-    { id: 6, image: work6, title: 'Game Store App Concept', category: 'Art' },
+    { id: 1, title: 'Docs App (Dynamic)', category: 'Reactjs', image: work1 },
+    { id: 2, title: 'Blog Website ', category: 'Nodejs', image: work2 },
+    { id: 3, title: 'Pinterest', category: 'Creative', image: work3 },
+    { id: 4, title: 'Product Designer', category: 'Design', image: work4 },
+    { id: 5, title: 'React Website', category: 'Reactjs', image: work5 },
+    { id: 6, title: 'Contact App', category: 'Nodejs', image: work6 },
   ],
 };
 

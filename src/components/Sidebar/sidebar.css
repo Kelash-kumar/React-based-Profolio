@@ -13,6 +13,26 @@
     transition: all 1s ease; /* Added transition for width */
 }
 
+.toggle__btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.9rem;
+    display: none;
+    cursor: pointer;
+    background-color:#fff ;
+    z-index: 1;
+    width: 45px;
+    height: 50px;
+    text-align: center;
+    line-height: 65px;
+    outline: none;
+    border: none;
+    
+
+
+}
+
 
 .logo_div img {
     height: 60px;
@@ -94,11 +114,11 @@
         justify-content: center;
         align-items: center;
         border-right: none;
-        border-bottom: 1px solid #fdfafa;
+        background-color: var(--bg-color);
         z-index: 1;
-        
-
+        background-color:#fff ;
     }
+    
     .icons:hover .icon__name{
         display: none;
     }
@@ -106,13 +126,14 @@
         display: none;
     }
     .sidebar__icons_div .icons {
-        font-size: 1.9rem;
+        font-size: 2.6vb;
     }
       
     .sidebar__icons_div {
         margin-top: 0;
         flex-direction: row;
         gap: 6vw;
+        padding: 0px 20px;
     }
     .icons{
         margin-top: 1rem;
@@ -122,4 +143,12 @@
         display: none;
     }
 
+    .toggle__btn{
+        display: block;
+       
+
+    }
+   
+
 }
+
