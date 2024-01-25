@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
           <div className="col-md-6">
             <motion.form
-              action="https://formspree.io/f/xjvjjzqy"
+              action="https://formspree.io/f/xvoezqjq"
               method="POST"
               className="contact-form"
               variants={itemVariants}
@@ -45,18 +45,21 @@ const Contact = () => {
                 name="name"
                 className="form-control"
                 placeholder="Your Name"
+                required
               />
               <motion.input
                 type="email"
                 name="email"
                 className="form-control"
                 placeholder="Your Email"
+                required
               />
               <motion.input
                 type="text"
                 name="subject"
                 className="form-control"
                 placeholder="Subject"
+                required
               />
               <motion.textarea
                 name="message"

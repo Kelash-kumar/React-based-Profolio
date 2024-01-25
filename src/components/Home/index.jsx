@@ -63,9 +63,14 @@ const Home = () => {
           }
          
         </motion.div>
-        <motion.a href="#" className="btn" variants={itemVariants}>
-          Hire Me
-        </motion.a>
+        {/* <motion.a href="#" className="btn" variants={itemVariants}> */}
+        <motion.a href="mailto:kelash.raisal@example.com?subject=Job%20Opportunity&body=Hello%20I%20am%20interested%20in%20working%20with%20you!" 
+         className='btn'
+          variants={itemVariants}
+        >Hire Me</motion.a>
+
+          
+        {/* </motion.a> */}
       </motion.section>
     </motion.section>
   );
