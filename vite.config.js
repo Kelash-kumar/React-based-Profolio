@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   jsxFactory: 'React.createElement',
   jsxFragment: 'React.Fragment',
-  base: '/React-based-Profolio/',
+  
 })
 
