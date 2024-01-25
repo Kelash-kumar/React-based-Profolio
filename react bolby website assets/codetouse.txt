@@ -1,0 +1,70 @@
+=============services==========css============
+
+/* .service__page{
+    
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+   
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.service__page .service__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5em;
+    gap: 2em;
+}
+
+.service__container .card{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 1em;
+    border-radius: 20px;
+    background-color: #e8bbb6;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 10px 0px #00000070;
+}
+.service__container .card:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.card .image{
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.card .image img{
+    width: 50%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card .content h1{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    text-align: center;
+}
+.card .content p{
+    font-size: .7em;
+    font-weight: 400;
+    color: #4e4d4d;
+    text-align: center;
+} */
+=============services==========css=============
