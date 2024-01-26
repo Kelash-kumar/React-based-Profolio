@@ -24,7 +24,9 @@ const Sidebar = () => {
       className="sidebar"
     >
       <span className='logo_div'>
+        <Link to='/' className='logo'>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM0A0HBisWIQ5iCj6OKYCWYvMglrIoa6OCp-eCGKlT43kq1en3oI2_jpQowg&s" alt="image" />
+        </Link>
       </span>
              {
                 Toggle ? 
