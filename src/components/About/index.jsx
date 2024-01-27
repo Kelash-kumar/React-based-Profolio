@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 import IconsComponent from './goal.component';
 import { FaServicestack } from "react-icons/fa";
 import './about.css';
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { MdOutlineIncompleteCircle } from "react-icons/md";
 import { MdGroups } from "react-icons/md";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { useUser } from '../../UserContext';
-
+import { MdAlternateEmail } from "react-icons/md";
+import { MdLocalPhone } from "react-icons/md";
+import { LiaAddressBook } from "react-icons/lia";
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -53,10 +54,14 @@ const About = () => {
           <div className='about__content__text'>
             <motion.p variants={fadeInUp}>I am a <strong>{profession} </strong> with a passion for learning and building web applications. </motion.p>
             <motion.p variants={fadeInUp}>{about}</motion.p>
-            <a href="/home/kelash-kumar/Downloads/" target="_blank" rel="noopener noreferrer" download={'kelash-kumar-CV.pdf'}>
+            {/* <a href='../../assets/MYResume_Fd.pdf' target="_blank" rel="noopener noreferrer" download={'kelash-kumar-CV.pdf'}> */}
 
-            <motion.button className='btn' variants={fadeInUp} aria-label='download-cv'>Download CV</motion.button>
-            </a>
+            <motion.button className='btn' variants={fadeInUp} aria-label='download-cv'
+             onClick={()=>{
+              window.open('../../assets/MYResume_Fd.pdf', '_blank');
+             }}
+            >Download CV</motion.button>
+            {/* </a> */}
           </div>
         </div>
         {isScrolled &&
@@ -79,25 +84,22 @@ const About = () => {
           <div className='about__goal__container'>
             <IconsComponent icon={<MdGroups />}
               name='Clinets satisfied'
-              value='100'
+              value='20'
             />
             <IconsComponent icon={<FaServicestack />}
               name='Services provided'
-              value='08'
+              value='03'
             />
             <IconsComponent icon={<MdOutlineIncompleteCircle />}
               name='project compeletion'
-              value='121'
+              value='25'
             />
-            <IconsComponent icon={<AiOutlineFundProjectionScreen />}
-              name='project compeletion'
-              value='121'
-            />
+            
           </div>
           <footer className='about__footer'>
-            <motion.span variants={fadeInUp}>{email}</motion.span>
-            <motion.span variants={fadeInUp}>{phone}</motion.span>
-            <motion.span variants={fadeInUp}>{address}</motion.span>
+            <motion.span variants={fadeInUp}><MdAlternateEmail/> <a>{email}</a></motion.span>
+            <motion.span variants={fadeInUp}><MdLocalPhone/> {phone}</motion.span>
+            <motion.span variants={fadeInUp}><LiaAddressBook/> {address}</motion.span>
           </footer>
         </div>
       </div>
