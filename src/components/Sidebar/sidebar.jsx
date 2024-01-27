@@ -43,7 +43,7 @@ const Sidebar = () => {
         transition={{ type: 'spring', stiffness: 40 }}
       
       className='sidebar__icons_div'>
-        <Link to='/' className='icons'>
+        <Link to='React-based-Profolio/' className='icons'>
           <IoHomeOutline/><span className="icon__name">home</span>
         </Link>
         <Link to='/about' className='icons'><span className="icon__name">About</span>
