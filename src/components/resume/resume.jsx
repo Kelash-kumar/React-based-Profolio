@@ -22,8 +22,7 @@ const Education = () => {
       className="edu_pge"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
-    >
+      animate="visible" >
       <motion.div className="edu_container">
         <div className='experience'>
           <h1 style={{ fontSize: '1.7rem', marginBottom: '2rem' }}>Experience</h1>
@@ -67,6 +66,7 @@ const Education = () => {
               )
             );
           })}
+   
         </div>
       </motion.div>
     </motion.div>

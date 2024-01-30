@@ -2,15 +2,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import './projects.css';
-// import work1 from '../../assets/Docs-App-react.png';
-// import work2 from '../../assets/Blog-website-login_singup.png';
-// import work3 from '../../assets/Pinterest_SingUp page.png';
-// import work4 from '../../assets/work-4.svg';
-// import work5 from '../../assets/work-5.svg';
-// import work6 from '../../assets/work-6.svg';
 import { useUser } from '../../UserContext';
 import ProjectItem from './ProjectItem';
-
+import Footer from '../Footer';
 
 const stagger = {
   visible: {
@@ -52,9 +46,11 @@ function Projects() {
         </motion.div>
         <motion.div className="projects__content">
           {filteredProjects.map((item) => (
-            <ProjectItem key={item.id} title={item.title} category={item.category} imgSrc={item.image} />
+            <ProjectItem key={item.id} title={item.title} category={item.category} imgSrc={item.image} desc={item.desc} />
           ))}
         </motion.div>
+        <Footer />
+    
       </div>
     </motion.section>
   );

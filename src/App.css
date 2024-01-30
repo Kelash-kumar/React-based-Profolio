@@ -31,3 +31,24 @@
     z-index: 999;
   }
  
+
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.social-media a:hover {
+  color: #3498db;
+}
+
+.rights-text {
+  font-size: 12px;
+  color: #777;
+}
