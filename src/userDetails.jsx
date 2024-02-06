@@ -33,8 +33,8 @@ const userDetails = {
           My experience extends to working with RESTful APIs, a crucial aspect of modern web development.My  aim is to deepen my understanding of Modern web dev. to further enhance my capabilities and inch closer to achieving my career goal.
           I am enthusiastic about leveraging my acquired skills and knowledge to contribute meaningfully to the field of web development and am committed to staying abreast of industry trends and advancements.`,
   social: [
-    { name: 'Linkedin', link: 'https://www.instagram.com/kelash_raisal/', icons: <CiLinkedin className="icon media_icon" /> },
-    { name: 'GitHub', link: 'https://www.github.com/kelash-raisal/', icons: <FiGithub className="icon media_icon" /> },
+    { name: 'Linkedin', link: 'https://www.linkedin.com/in/kelash-kumar-47245a255/', icons: <CiLinkedin className="icon media_icon" /> },
+    { name: 'GitHub', link: 'https://github.com/Kelash-kumar', icons: <FiGithub className="icon media_icon" /> },
     { name: 'Facebook', link: 'https://www.facebook.com/kelash.raisal/', icons: <CiFacebook className="icon media_icon" /> },
   ],
   skills: [
