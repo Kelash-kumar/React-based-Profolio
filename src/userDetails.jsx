@@ -37,6 +37,7 @@ const userDetails = {
     { name: 'GitHub', link: 'https://github.com/Kelash-kumar', icons: <FiGithub className="icon media_icon" /> },
     { name: 'Facebook', link: 'https://www.facebook.com/kelash.raisal/', icons: <CiFacebook className="icon media_icon" /> },
   ],
+  
   skills: [
     { name: 'HTML', percentage: '95', color: '#f16529' },
     { name: 'CSS', percentage: '90', color: '#2965f1' },
