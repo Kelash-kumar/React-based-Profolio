@@ -11,7 +11,7 @@ import { useUser } from '../../UserContext';
 import { MdAlternateEmail } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 import { LiaAddressBook } from "react-icons/lia";
-import ResumePDF from '../../assets/MYResume_Fd.pdf'
+import ResumePDF from '../../assets/kelash kumar-CV.pdf'
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -57,7 +57,7 @@ const About = () => {
             <motion.p variants={fadeInUp}>I am a <strong>{profession} </strong> with a passion for learning and building web applications. </motion.p>
             <motion.p variants={fadeInUp}>{about}</motion.p>
             {/* set the dwonload button having downlwond pdf */}
-            <motion.a href={ResumePDF} download='resume.pdf' className='btn btn--primary' variants={fadeInUp}>Download CV</motion.a>
+            <motion.a href={ResumePDF} download='My-CV.pdf' className='btn btn--primary' variants={fadeInUp}>Download CV</motion.a>
             
           </div>
         </div>
